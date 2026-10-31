@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель менеджера — IT Support</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="dashboard-container">
+
+        <nav class="navbar">
+            <a class="nav-brand" href="manager.html">IT Support</a>
+
+            <div class="nav-links">
+                <a href="manager.html" class="active">Панель менеджера</a>
+                <a href="dashboard.html">Особистий кабінет</a>
+                <button id="logoutButton" type="button">Вийти</button>
+            </div>
+        </nav>
+
+        <header class="page-header">
+            <div>
+                <h1>Панель менеджера</h1>
+                <p>Контроль заявок на ремонт комп'ютерної техніки.</p>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <h3>Усього заявок</h3>
+                <p id="totalRequests">Завантаження...</p>
+            </article>
+
+            <article class="stat-card">
+                <h3>Нові</h3>
+                <p id="newRequests">—</p>
+            </article>
+
+            <article class="stat-card">
+                <h3>У роботі</h3>
+                <p id="inProgressRequests">—</p>
+            </article>
+
+            <article class="stat-card">
+                <h3>Завершені</h3>
+                <p id="completedRequests">—</p>
+            </article>
+        </section>
+
+        <section class="content-card">
+            <h2>Усі заявки</h2>
+
+            <div class="form-group">
+                <label for="searchInput">Пошук заявок</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="ID, автор або назва заявки..."
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="statusFilter">Фільтр за статусом</label>
+                <select id="statusFilter">
+                    <option value="">Усі статуси</option>
+                    <option value="new">Нова</option>
+                    <option value="in_progress">У роботі</option>
+                    <option value="waiting">Очікує</option>
+                    <option value="completed">Завершена</option>
+                    <option value="rejected">Відхилена</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="priorityFilter">Фільтр за пріоритетом</label>
+                <select id="priorityFilter">
+                    <option value="">Усі пріоритети</option>
+                    <option value="low">Низький</option>
+                    <option value="medium">Середній</option>
+                    <option value="high">Високий</option>
+                    <option value="critical">Критичний</option>
+                </select>
+            </div>
+
+            <div id="requestsList">
+                <p>Завантаження заявок...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/manager.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Створення заявки — IT Support</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="/js/request.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a class="nav-brand" href="dashboard.html">IT Support</a>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Головна</a>
+            <a href="create-request.html" class="active">Створити заявку</a>
+        </div>
+    </nav>
+
+    <main class="auth-container">
+        <h1>Нова заявка</h1>
+        <p>Заповніть інформацію про несправність.</p>
+
+        <form id="requestForm">
+            <label for="title">Назва проблеми</label>
+            <input type="text" id="title" required>
+
+            <label for="equipmentType">Тип обладнання</label>
+            <select id="equipmentType" required>
+                <option value="">Оберіть обладнання</option>
+                <option value="Комп'ютер">Комп'ютер</option>
+                <option value="Ноутбук">Ноутбук</option>
+                <option value="Принтер">Принтер</option>
+                <option value="Інше">Інше</option>
+            </select>
+
+            <label for="inventoryNumber">Інвентарний номер</label>
+            <input type="text" id="inventoryNumber">
+
+            <label for="location">Місце розташування</label>
+            <input type="text" id="location" required>
+
+            <label for="description">Опис проблеми</label>
+            <textarea id="description" rows="4" required></textarea>
+
+            <button type="submit">Надіслати заявку</button>
+            <p id="message"></p>
+        </form>
+
+        <p><a href="dashboard.html">Назад на головну</a></p>
+    </main>
+
+    <script type="module" src="js/requests.js"></script>
+</body>
+</html>

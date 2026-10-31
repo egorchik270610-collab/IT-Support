@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — IT Support</title>
+    <script type="module" src="js/auth.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="auth-container">
+        <h1>IT Support</h1>
+        <p>Создання аккаунта</p>
+
+        <form id="registerForm">
+            <label for="fullName">Им'я та прізвище</label>
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Іван Петренко"
+                required
+            >
+
+            <label for="email">Электрона пошта</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="example@mail.com"
+                required
+            >
+
+            <label for="password">Пароль</label>
+            <input
+                type="password"
+                id="password"
+                minlength="8"
+                required
+            >
+
+            <label for="confirmPassword">Підтвердження пароля</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                minlength="8"
+                required
+            >
+
+            <button type="submit">Зареєструватись</button>
+
+            <p id="message"></p>
+        </form>
+
+        <p>Вже є аккаунт? <a href="index.html">Увійти</a></p>
+    </main>
+</body>
+</html>

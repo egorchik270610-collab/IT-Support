@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет — IT Support</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="dashboard-container">
+
+        <nav class="navbar">
+            <a class="nav-brand" href="dashboard.html">IT Support</a>
+
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Головна</a>
+                <a href="create-request.html">Створити заявку</a>
+
+                <a href="manager.html" id="managerLink" hidden>
+                    Панель менеджера
+                </a>
+
+                <a href="admin.html" id="adminLink" hidden>
+                    Панель адміністратора
+                </a>
+
+                <button id="logoutButton" type="button">Вийти</button>
+            </div>
+        </nav>
+
+        <header class="page-header">
+            <div>
+                <h1>Особистий кабінет</h1>
+                <p>Переглядайте свої заявки та їхній статус.</p>
+            </div>
+
+            <div class="page-actions">
+                <a href="create-request.html">+ Створити заявку</a>
+            </div>
+        </header>
+
+        <section class="content-card">
+            <h2>Мій профіль</h2>
+            <p>Тут ви можете змінити свої контактні дані.</p>
+
+            <form id="profileForm">
+
+                <div class="form-group">
+                    <label for="profileName">Ім'я та прізвище</label>
+                    <input
+                        type="text"
+                        id="profileName"
+                        placeholder="Введіть ім'я та прізвище"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="profileEmail">Електронна пошта</label>
+                    <input
+                        type="email"
+                        id="profileEmail"
+                        disabled
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="profilePhone">Номер телефону</label>
+                    <input
+                        type="tel"
+                        id="profilePhone"
+                        placeholder="+380..."
+                    >
+                </div>
+
+                <button type="submit" id="saveProfileButton">
+                    Зберегти зміни
+                </button>
+
+                <p id="profileMessage"></p>
+
+            </form>
+        </section>
+
+        <section class="content-card">
+            <h2>Мої заявки</h2>
+            <p>Тут відображатимуться ваші заявки на ремонт.</p>
+
+            <div class="form-group">
+                <label for="searchInput">Пошук за назвою</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Введіть назву заявки..."
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="statusFilter">Фільтр за статусом</label>
+                <select id="statusFilter">
+                    <option value="">Усі статуси</option>
+                    <option value="new">Нова</option>
+                    <option value="in_progress">У роботі</option>
+                    <option value="waiting">Очікує</option>
+                    <option value="completed">Завершена</option>
+                    <option value="rejected">Відхилена</option>
+                </select>
+            </div>
+
+            <div id="requestsList">
+                <p>Завантаження заявок...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
