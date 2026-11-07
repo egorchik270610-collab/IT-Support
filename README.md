@@ -48,7 +48,7 @@ it-support/
 ├── index.html
 ├── register.html
 ├── dashboard.html
-├── create-request.html
+├── create-requests.html
 ├── admin.html
 ├── manager.html
 │
